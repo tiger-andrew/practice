@@ -17,18 +17,29 @@ class Program
             masuList.Add(Console.ReadLine());
         }
         
-        var zahyouDic = new Dictionary<int,int>();
+        var zahyouDic = new List<List<int>>();;
         
         for(int i=0; i < n; i++)
         {
-            var tmp = Console.ReadLine().Split(' ');
-            zahyouDic.Add(int.Parse(tmp[0]), int.Parse(tmp[1]));
+            var ab = Console.ReadLine().Split(' ');
+            
+            zahyouDic.Add(new List<int>());
+            
+            for(int j=0; j < 2; j++)
+            {
+                zahyouDic[i].Add(int.Parse(ab[j]));
+            }
         }
+        
+        
+        
         
         foreach(var ele in zahyouDic)
         {
-            int y = ele.Key;
-            int x = ele.Value;
+            
+            
+            int y = ele[0];
+            int x = ele[1];
             string targetLine = masuList[y];
             
             string convertedTargetLine = "";
