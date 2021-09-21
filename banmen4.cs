@@ -17,11 +17,17 @@ class Program
         }
         
         
-        for(int k=0; k<h; k++)
+        for(int i=0; i<h; i++)
         {
-            for(int i=0; i<w; i++)
+            for(int j=0; j<w; j++)
             {
-               
+               if(i==0 || masuList[i-1][j].ToString()=="#")
+               {
+                   if(i==h-1 || masuList[i+1][j].ToString()=="#")
+                   {
+                       Console.WriteLine(i +" "+ + j);
+                   }
+               }
             }
         }
     }
